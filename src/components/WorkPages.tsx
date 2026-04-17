@@ -12,7 +12,7 @@ import wRendering from "@/assets/works/rendering.png";
 import lumi1 from "@/assets/projects/lumi-1.png";
 import lumi2 from "@/assets/projects/lumi-2.png";
 import capsul1 from "@/assets/projects/capsul-1.png";
-import capsul2 from "@/assets/projects/capsul-2.png";
+import capsul2 from "@/assets/projects/capsul-2.png.png";
 import entwine1 from "@/assets/projects/entwine-1.png";
 import entwine2 from "@/assets/projects/entwine-2.png";
 
