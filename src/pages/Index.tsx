@@ -90,7 +90,7 @@ const ProjectShowcase = ({
             src={image}
             alt={`Portfolio page ${index}`}
             loading="lazy"
-            className="w-full h-auto block transition-transform duration-[1400ms] ease-out group-hover:scale-[1.03]"
+            className="w-full h-auto block transition-transform duration-1000 ease-out group-hover:scale-[1.03]"
           />
         </div>
       </motion.div>
@@ -113,7 +113,7 @@ const ModelCard = ({ image, title, caption, tone }: { image: string; title: stri
           src={image}
           alt={title}
           loading="lazy"
-          className="w-full h-full object-cover transition-transform duration-[1600ms] ease-out group-hover:scale-110"
+          className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
         />
       </div>
       <div className="p-6">

@@ -473,7 +473,7 @@ const Embroidery = () => (
             <img
               src={b.img}
               alt={`Embroidery ${b.label}`}
-              className="w-full h-auto object-contain transition-transform duration-[1500ms] group-hover:scale-110"
+              className="w-full h-auto object-contain transition-transform duration-1000 group-hover:scale-110"
             />
             <div className="absolute top-6 left-6 font-hand text-5xl text-background drop-shadow-lg">
               {b.label}
@@ -556,7 +556,7 @@ const Other = () => (
               <img
                 src={w.img}
                 alt={w.t}
-                className="w-full h-full object-contain transition-transform duration-[1400ms] group-hover:scale-110"
+                className="w-full h-full object-contain transition-transform duration-1000 group-hover:scale-110"
               />
             </div>
             <div className="p-5 flex items-center justify-between">
