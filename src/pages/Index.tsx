@@ -198,7 +198,7 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="flex items-center gap-2 text-sm uppercase tracking-[0.4em] text-muted-foreground mb-8"
           >
-            <Sparkles className="w-4 h-4 text-primary" /> Creative Portfolio · 2025
+            <Sparkles className="w-4 h-4 text-primary" /> Creative Portfolio · 2026
           </motion.div>
 
           <h1 className="font-display font-light text-[15vw] md:text-[10rem] leading-[0.85] tracking-tight">
