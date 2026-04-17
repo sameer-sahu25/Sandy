@@ -1,0 +1,30 @@
+#!/bin/sh
+# Git hook to enforce conventional commits and block bot-specific formatting
+
+# 1. Block generic "Changes" message
+msg=$(cat "$1")
+if [ "$msg" = "Changes" ]; then
+  echo "Error: Generic commit message 'Changes' is not allowed."
+  echo "Please provide a meaningful, human-readable description of your changes."
+  exit 1
+fi
+
+# 2. Block bot-specific metadata or prefixes (e.g. gpt-engineer-app[bot])
+# But allow the word "bot" in a descriptive context
+if echo "$msg" | grep -iqE "gpt-engineer-app\[bot\]|lovable-dev-bot"; then
+  echo "Error: Bot-specific metadata detected in commit message."
+  echo "Please use standard, human-readable commit messages without bot metadata."
+  exit 1
+fi
+
+# 3. Enforce conventional commit standards
+# Regex pattern for conventional commits: <type>(<scope>): <subject>
+pattern="^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\(.+\))?: .+$"
+if ! echo "$msg" | grep -iqE "$pattern"; then
+  echo "Error: Commit message does not follow conventional commit standards."
+  echo "Example: feat(ui): add new button component"
+  echo "Valid types: feat, fix, docs, style, refactor, perf, test, build, ci, chore, revert"
+  exit 1
+fi
+
+exit 0

@@ -1,0 +1,20 @@
+# <type>(<scope>): <subject>
+# |<----  using conventional commit standards ---->|
+
+# feat: (new feature for the user, not a new feature for build script)
+# fix: (bug fix for the user, not a fix to a build script)
+# docs: (changes to the documentation)
+# style: (formatting, missing semi colons, etc; no production code change)
+# refactor: (refactoring production code, eg. renaming a variable)
+# perf: (code changes that improve performance)
+# test: (adding missing tests, refactoring tests; no production code change)
+# build: (changes that affect the build system or external dependencies)
+# ci: (changes to our CI configuration files and scripts)
+# chore: (updating grunt tasks etc; no production code change)
+# revert: (reverting a previous commit)
+
+# Example: feat(ui): add new button component
+# Example: fix(auth): prevent null user ID during login
+
+# DO NOT include bot-specific metadata, prefixes, or suffixes.
+# All final commits must be human-readable and describe the changes made.

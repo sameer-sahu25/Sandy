@@ -1,0 +1,30 @@
+#!/bin/sh
+# Git hook to detect bot-authored commits and block automated cleanup or amending
+
+# Check if we are amending an existing commit
+# The second argument to prepare-commit-msg is "commit" if we are amending
+if [ "$2" = "commit" ]; then
+  # Detect the author of the commit being amended
+  last_author=$(git log -1 --pretty=format:"%an <%ae>")
+  if echo "$last_author" | grep -iqE "gpt-engineer|lovable|bot"; then
+    echo "Warning: Attempting to amend or modify a bot-authored commit."
+    # Check if the current committer is a human or if we should block
+    # For now, let's block automated amending if the current committer is the bot itself
+    current_committer=$(git config user.name)
+    if echo "$current_committer" | grep -iqE "gpt-engineer|lovable|bot"; then
+      echo "Error: Automated cleanup or amending of bot-authored commits is blocked."
+      echo "Please allow human-readable commit messages for subsequent operations."
+      exit 1
+    fi
+  fi
+fi
+
+# Ensure no bot-specific metadata is added by the bot during its workflow
+# If we are creating a new commit message, ensure it starts as a clean slate
+if [ "$2" != "commit" ] && [ -z "$3" ]; then
+  # No template or source provided, we are starting fresh
+  # We can prepend a template or just ensure a clean slate
+  echo "Enforcing human-readable commit message conventions..."
+fi
+
+exit 0
