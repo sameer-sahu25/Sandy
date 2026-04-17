@@ -468,12 +468,12 @@ const Embroidery = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: i * 0.15, ease: EASE }}
-            className={`relative rounded-[2rem] overflow-hidden ${b.tone} aspect-[4/5] grain shadow-card group`}
+            className={`relative rounded-[2rem] overflow-hidden ${b.tone} aspect-auto grain shadow-card group`}
           >
             <img
               src={b.img}
               alt={`Embroidery ${b.label}`}
-              className="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-90 transition-transform duration-[1500ms] group-hover:scale-110"
+              className="w-full h-auto object-contain transition-transform duration-[1500ms] group-hover:scale-110"
             />
             <div className="absolute top-6 left-6 font-hand text-5xl text-background drop-shadow-lg">
               {b.label}
@@ -552,11 +552,11 @@ const Other = () => (
             transition={{ duration: 0.8, delay: (i % 3) * 0.1, ease: EASE }}
             className="group relative overflow-hidden rounded-[1.5rem] bg-card shadow-soft lift"
           >
-            <div className="aspect-[4/5] overflow-hidden">
+            <div className="aspect-[4/5] overflow-hidden bg-muted/30 flex items-center justify-center">
               <img
                 src={w.img}
                 alt={w.t}
-                className="w-full h-full object-cover transition-transform duration-[1400ms] group-hover:scale-110"
+                className="w-full h-full object-contain transition-transform duration-[1400ms] group-hover:scale-110"
               />
             </div>
             <div className="p-5 flex items-center justify-between">
@@ -599,8 +599,8 @@ const ThankYou = () => (
       </motion.h3>
       <p className="mt-10 text-background/80 text-lg">
         Find me on{" "}
-        <a className="underline underline-offset-4 font-medium" href="https://instagram.com/__sandhya_." target="_blank" rel="noreferrer">
-          @__sandhya_.
+        <a className="underline underline-offset-4 font-medium" href="https://www.instagram.com/__sandhya_._/" target="_blank" rel="noreferrer">
+          @__sandhya_._
         </a>{" "}
         ·{" "}
         <a className="underline underline-offset-4 font-medium" href="mailto:sandhyaaa.0122@gmail.com">

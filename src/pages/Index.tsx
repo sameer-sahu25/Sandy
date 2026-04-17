@@ -165,8 +165,8 @@ const Index = () => {
       {/* NAV */}
       <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/60 border-b border-border/40">
         <nav className="container flex items-center justify-between py-4">
-          <a href="#top" className="font-display text-xl tracking-tight">
-            Sandhya<span className="text-primary">.</span>
+          <a href="#top" className="flex items-center gap-2">
+            <img src="/websitelogo.ico" alt="SR Logo" className="w-10 h-10 object-contain" />
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#about" className="hover:text-foreground transition-colors">About</a>
@@ -398,7 +398,7 @@ const Index = () => {
                 </div>
               </a>
               <a
-                href="https://instagram.com/__sandhya_."
+                href="https://www.instagram.com/__sandhya_._/"
                 target="_blank"
                 rel="noreferrer"
                 className="group block border-t border-background/20 pt-8 hover:border-primary transition-colors"
@@ -407,7 +407,7 @@ const Index = () => {
                   <Instagram className="w-4 h-4" /> Instagram
                 </div>
                 <div className="font-display text-3xl md:text-4xl group-hover:text-primary transition-colors">
-                  @__sandhya_.
+                  @__sandhya_._
                 </div>
               </a>
               <div className="border-t border-background/20 pt-8">
