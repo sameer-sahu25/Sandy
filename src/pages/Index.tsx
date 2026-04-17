@@ -206,7 +206,7 @@ const Index = () => {
               initial={{ opacity: 0, y: 60 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="block"
+              className="block pb-2 -mb-2"
             >
               Sandhya<span className="font-hand italic text-primary">rani</span>
             </motion.span>
@@ -214,7 +214,7 @@ const Index = () => {
               initial={{ opacity: 0, y: 60 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.1, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
-              className="block gradient-dream font-medium"
+              className="block gradient-dream font-medium pb-4 -mb-4"
             >
               Prusty.
             </motion.span>
